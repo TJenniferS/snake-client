@@ -18,6 +18,7 @@ const connect = function () {
   // event handler to print successfully connected to game server
   conn.on("connect", () => {
     console.log("Successfully connected to game server!");
+    conn.write("Name:TJS");
   });
 
 
