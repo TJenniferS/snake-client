@@ -19,13 +19,13 @@ const connect = function () {
   conn.on("connect", () => {
     console.log("Successfully connected to game server!");
     conn.write("Name: TJS"); // `Hey TJS` in server board
-    conn.write("Move: up"); // Send the "Move: up" command
+
+    // Delay before sending the "Move: up" command
+    setTimeout(() => {
+      conn.write("Move: up");
+    }, 500);
 
   });
-
-
-
-
 
   return conn; // return connected object to caller
 };
