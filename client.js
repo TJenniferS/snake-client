@@ -1,4 +1,4 @@
-const net = require("net");
+const net = require("net"); // require net from Node.js
 
 // establishes a connection with the game server
 const connect = function () {
@@ -15,7 +15,7 @@ const connect = function () {
     console.log("received:", data); // log received data
   });
 
-  return conn;
+  return conn; // return connected object to caller
 };
 
-module.exports = { connect };
+module.exports = { connect }; // export connect function containing an objects
