@@ -18,14 +18,12 @@ const connect = function () {
   // event handler to print successfully connected to game server
   conn.on("connect", () => {
     console.log("Successfully connected to game server!");
-    conn.write("Name: TJS");
+    conn.write("Name: TJS"); // `Hey TJS` in server board
+    conn.write("Move: up"); // Send the "Move: up" command
+
   });
 
-    // event handler to move up one square unless facing down
-    conn.on("connect", () => {
-      console.log("Moved one square up!");
-      conn.write("Move: up");
-    });
+
 
 
 
