@@ -21,6 +21,12 @@ const connect = function () {
     conn.write("Name: TJS");
   });
 
+    // event handler to move up one square unless facing down
+    conn.on("connect", () => {
+      console.log("Moved one square up!");
+      conn.write("Move: up");
+    });
+
 
 
   return conn; // return connected object to caller
