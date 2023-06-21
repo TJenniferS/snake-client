@@ -17,9 +17,6 @@ const setupInput = function(conn) {
   // return stdin; // not currently being used
 };
 
-
-let pressedKeys = {}; // for diagonal
-
 // handle user input from stdin
 const handleUserInput = function(key) {
   if (key === '\u0003') {
@@ -43,7 +40,5 @@ const handleUserInput = function(key) {
   }
 
 };
-
-// setupInput();
 
 module.exports = { setupInput }; // export setupInput function containing an objects
