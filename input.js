@@ -17,6 +17,21 @@ const handleUserInput = function (key) {
   if (key === '\u0003') {
     // Terminate game upon Ctrl + C
     process.exit();
+
+    // else if statements for WASD
+
+  } else if (key === 'w') {
+    // `w` sends the "Move: up" command to the server
+    connection.write("Move: up");
+  } else if (key === 'a') {
+    // `a` sends the "Move: left" command to the server
+    connection.write("Move: left");
+  } else if (key === 's') {
+    // `s` sends the "Move: down" command to the server
+    connection.write("Move: down");
+  } else if (key === 'd') {
+    // `d` sends the "Move: right" command to the server
+    connection.write("Move: right");
   }
 
 };
