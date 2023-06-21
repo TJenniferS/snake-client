@@ -21,7 +21,7 @@ const connect = function() {
   // event handler to print successfully connected to game server
   conn.on("connect", () => {
     console.log("Successfully connected to game server!");
-    conn.write("Name: JCR"); // `Hey JCR` in server board
+    sendMessage(conn, "Name: JCR"); // `Hey JCR` in server board
 
   });
 
