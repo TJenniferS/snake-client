@@ -36,6 +36,6 @@ const handleUserInput = function (key) {
 
 };
 
-setupInput();
+// setupInput();
 
 module.exports = { setupInput }; // export setupInput function containing an objects
