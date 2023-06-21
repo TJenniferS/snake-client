@@ -20,10 +20,10 @@ const connect = function() {
     console.log("Successfully connected to game server!");
     conn.write("Name: TJS"); // `Hey TJS` in server board
 
-    // Delay before sending the "Move: up" command
-    setTimeout(() => {
-      // conn.write("Move: up");
-    }, 500);
+    // // Delay before sending the "Move: up" command
+    // setTimeout(() => {
+    //   // conn.write("Move: up");
+    // }, 500);
 
   });
 
