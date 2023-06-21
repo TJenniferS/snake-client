@@ -1,8 +1,10 @@
 // Stores the active TCP connection object
 let connection; // declare connection outermost scope for else if statements WASD
 
-// setup interface to handle user input from stdin
+// async with stdin
+let stdin;
 
+// setup interface to handle user input from stdin
 const setupInput = function(conn) {
 
   connection = conn; // assign passed connection object to connection
@@ -14,18 +16,21 @@ const setupInput = function(conn) {
   // Event listener for user input
   stdin.on("data", handleUserInput);
 
+  // Event listener for Ctrl + c
+  stdin.on("data", handleCtrlC)
+
+  // set timeout to handle continuous input async
+  setTimeout(handleContinuousInput, 0);
+
   // return stdin; // not currently being used
 };
 
 // handle user input from stdin
 const handleUserInput = function(key) {
-  if (key === '\u0003') {
-    // Terminate game upon Ctrl + C
-    process.exit();
 
-    // else if statements for WASD
+    // if statements for WASD
 
-  } else if (key === 'w') {
+  if (key === 'w') {
     // `w` sends the "Move: up" command to the server
     connection.write("Move: up");
 
@@ -59,4 +64,4 @@ const handleUserInput = function(key) {
 };
 
 
-module.exports = { setupInput }; // export setupInput function containing an objects
+module.exports = { setupInput }; // export setupInput function containing objects
