@@ -22,7 +22,7 @@ const connect = function () {
 
     // Delay before sending the "Move: up" command
     setTimeout(() => {
-      conn.write("Move: up");
+      // conn.write("Move: up");
     }, 500);
 
   });
