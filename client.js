@@ -25,6 +25,13 @@ const connect = function() {
 
   });
 
+  // event handler to handle close event and exit the program with idle or crash
+  conn.on("close", () => {
+    console.log("Connection closed. Exiting...");
+    process.exit(); // output:  "you crashed, so you ded."
+    //
+  });
+
   return conn; // return connected object to caller
 };
 
