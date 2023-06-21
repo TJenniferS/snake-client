@@ -28,17 +28,35 @@ const handleUserInput = function(key) {
   } else if (key === 'w') {
     // `w` sends the "Move: up" command to the server
     connection.write("Move: up");
+
   } else if (key === 'a') {
     // `a` sends the "Move: left" command to the server
     connection.write("Move: left");
+
   } else if (key === 's') {
     // `s` sends the "Move: down" command to the server
     connection.write("Move: down");
+
   } else if (key === 'd') {
     // `d` sends the "Move: right" command to the server
     connection.write("Move: right");
+
+
+
+  } else if (key === 'W') {
+    connection.write("Say: Moving up!");
+
+  } else if (key === 'A') {
+    connection.write("Say: Moving left!");
+
+  } else if (key === 'S') {
+    connection.write("Say: Moving down!");
+
+  } else if (key === 'D') {
+    connection.write("Say: Moving right!");
   }
 
 };
+
 
 module.exports = { setupInput }; // export setupInput function containing an objects
