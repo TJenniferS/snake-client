@@ -1,7 +1,7 @@
 const net = require("net"); // require net from Node.js
 
 // establishes a connection with the game server
-const connect = function () {
+const connect = function() {
   const conn = net.createConnection({
     host: "172.27.131.43", // IP address here,
     port: 50541 // PORT number here,
