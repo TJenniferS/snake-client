@@ -17,7 +17,7 @@ const setupInput = function(conn) {
   stdin.on("data", handleUserInput);
 
   // Event listener for Ctrl + c
-  stdin.on("data", handleCtrlC)
+  stdin.on("data", handleCtrlC);
 
   // set timeout to handle continuous input async
   setTimeout(handleContinuousInput, 0);
@@ -28,7 +28,7 @@ const setupInput = function(conn) {
 // handle user input from stdin
 const handleUserInput = function(key) {
 
-    // if statements for WASD
+  // if statements for WASD
 
   if (key === 'w') {
     // `w` sends the "Move: up" command to the server
@@ -61,6 +61,13 @@ const handleUserInput = function(key) {
     connection.write("Say: Moving right!");
   }
 
+};
+
+const handleCtrlC = function(key) {
+  if (key === "\u0003") {
+    // Terminate game upon Ctrl + C
+    process.exit();
+  }
 };
 
 
