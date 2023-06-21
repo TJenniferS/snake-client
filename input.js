@@ -1,8 +1,9 @@
-let connection; // declase connection outermost scope for else if statements WASD
+let connection; // declare connection outermost scope for else if statements WASD
 
 // setup interface to handle user input from stdin
 
-const setupInput = function() {
+const setupInput = function(conn) {
+  connection = conn; // assign passed connection object to connection
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
