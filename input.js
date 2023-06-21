@@ -1,8 +1,9 @@
+// Stores the active TCP connection object
 let connection; // declare connection outermost scope for else if statements WASD
 
 // setup interface to handle user input from stdin
 
-const setupInput = function(conn) {
+const setupInput = (conn) => {
   connection = conn; // assign passed connection object to connection
   const stdin = process.stdin;
   stdin.setRawMode(true);
