@@ -17,9 +17,6 @@ const handleUserInput = function (key) {
   if (key === '\u0003') {
     // Terminate game upon Ctrl + C
     process.exit();
-
-    // else statements for WASD
-  } else if (key === 'w') {
   }
 
 };
