@@ -42,7 +42,7 @@ const handleUserInput = function(key) {
     connection.write("Move: right");
 
 
-
+    // when WASD pressed, print messages on server game board
   } else if (key === 'W') {
     connection.write("Say: Moving up!");
 
