@@ -8,7 +8,7 @@ let stdin;
 const setupInput = function(conn) {
 
   connection = conn; // assign passed connection object to connection
-  const stdin = process.stdin;
+  stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
   stdin.resume();
