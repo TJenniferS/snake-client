@@ -1,8 +1,6 @@
 // Stores the active TCP connection object
 let connection; // declare connection outermost scope for else if statements WASD
 
-// async with stdin
-// let stdin;
 
 // setup interface to handle user input from stdin
 const setupInput = function(conn) {
@@ -19,10 +17,6 @@ const setupInput = function(conn) {
   // Event listener for Ctrl + c
   stdin.on("data", handleCtrlC);
 
-  // // set timeout to handle continuous input async
-  // setTimeout(handleContinuousInput, 0);
-
-  // return stdin; // not currently being used
 };
 
 // handle user input from stdin
@@ -70,10 +64,6 @@ const handleCtrlC = function(key) {
     process.exit();
   }
 };
-
-// const handleContinuousInput = function() {
-//   stdin.resume();
-// };
 
 
 module.exports = { setupInput }; // export setupInput function containing objects
