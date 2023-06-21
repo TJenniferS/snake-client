@@ -9,7 +9,7 @@ const setupInput = function() {
   // Event listener for user input
   stdin.on("data", handleUserInput);
 
-  return stdin;
+  // return stdin; // not currently being used
 };
 
 // handle user input from stdin
