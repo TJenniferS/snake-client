@@ -5,7 +5,7 @@ const { setupInput } = require("./input"); // require setupInput
 
 console.log("Connecting ..."); // initial print
 
-const conn = connect(); // then call `connect` to connect with game server
+connect(); // then call `connect` to connect with game server
 // declare conn to connect () rather than just calling connect() for WASD input
 
 setupInput(); // call setupInput
