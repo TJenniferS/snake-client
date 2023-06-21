@@ -1,3 +1,5 @@
+let connection; // declase connection outermost scope for else if statements WASD
+
 // setup interface to handle user input from stdin
 
 const setupInput = function() {
