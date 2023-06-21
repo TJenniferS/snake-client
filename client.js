@@ -1,5 +1,8 @@
 const net = require("net"); // require net from Node.js
 
+const { IP, PORT } = require("./constants");
+// require IP and PORT as they are constants
+
 // establishes a connection with the game server
 const connect = function() {
   const conn = net.createConnection({
