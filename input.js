@@ -22,3 +22,5 @@ const handleUserInput = function (key) {
 };
 
 setupInput();
+
+module.exports = { setupInput }; // export setupInput function containing an objects
