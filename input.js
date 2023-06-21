@@ -15,7 +15,7 @@ const setupInput = function() {
 };
 
 // handle user input from stdin
-const handleUserInput = function (key) {
+const handleUserInput = function(key) {
   if (key === '\u0003') {
     // Terminate game upon Ctrl + C
     process.exit();
