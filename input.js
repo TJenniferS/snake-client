@@ -63,11 +63,16 @@ const handleUserInput = function(key) {
 
 };
 
+// handle Ctrl + C input event
 const handleCtrlC = function(key) {
   if (key === "\u0003") {
     // Terminate game upon Ctrl + C
     process.exit();
   }
+};
+
+const handleContinuousInput = function() {
+  stdin.resume();
 };
 
 
