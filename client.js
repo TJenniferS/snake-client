@@ -35,4 +35,19 @@ const connect = function() {
   return conn; // return connected object to caller
 };
 
-module.exports = { connect }; // export connect function containing an objects
+
+const sendMessage = function(connection, message) {
+  connection.write(message);
+};
+
+const handleError = function(error) {
+  console.error("An error occurred:", error);
+};
+
+const gameOver = function() {
+  console.log("Game over. Exiting...");
+  process.exit();
+};
+
+module.exports = { connect, sendMessage, handleError, gameOver };
+// export connect function containing an objects
