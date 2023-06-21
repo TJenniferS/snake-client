@@ -3,7 +3,8 @@ let connection; // declare connection outermost scope for else if statements WAS
 
 // setup interface to handle user input from stdin
 
-const setupInput = (conn) => {
+const setupInput = function(conn) {
+
   connection = conn; // assign passed connection object to connection
   const stdin = process.stdin;
   stdin.setRawMode(true);
