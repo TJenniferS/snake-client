@@ -4,8 +4,6 @@ let connection; // declare connection outermost scope for else if statements WAS
 // async with stdin
 let stdin;
 
-let crashCount = 0; // Track the number of crashes
-
 // setup interface to handle user input from stdin
 const setupInput = function(conn) {
 
